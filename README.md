@@ -12,6 +12,10 @@ then
 
 `npm run start`
 
+then open
+
+http://localhost:3000
+
 Only the following use case is valid.
 
 ![Using .env file](./docs/images/env-file.png)
@@ -27,6 +31,10 @@ Run
 then
 
 `npm run start:ci`
+
+then open
+
+http://localhost:3000
 
 Only the following use cases are valid.
 
