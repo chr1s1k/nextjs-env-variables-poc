@@ -5,18 +5,29 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:integration": "cross-env ENV_FILE_PATH=env/.env.integration next build",
+    "build:staging": "cross-env ENV_FILE_PATH=env/.env.staging next build",
+    "build:production": "cross-env ENV_FILE_PATH=env/.env.staging next build",
     "start": "next start",
+    "start:ci": "cross-env NEXT_PUBLIC_API_URL=https://dummyjson.com/todos next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.14.4",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "dotenv": "^16.0.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
+    "prettier": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "superagent": "^8.0.9",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@types/superagent": "^4.1.16",
+    "cross-env": "^7.0.3"
   }
 }
